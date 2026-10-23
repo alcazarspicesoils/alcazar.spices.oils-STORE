@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ألكازار | للتوابل الملكية والزيوت الطبيعية - تلمسان</title>
+    <meta name="description" content="منصة ألكازار للتوابل الملكية والزيوت الطبيعية بتلمسان - جودة ملكية وأصالة أندلسية.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            850: '#0B3B2D',
+                            900: '#0F4C3A', // Emerald Royal
+                        },
+                        gold: {
+                            300: '#F3E5AB',
+                            400: '#E6CA65',
+                            500: '#D4AF37', // Royal Gold
+                            600: '#AA820A',
+                        },
+                        burgundy: {
+                            800: '#600018',
+                            900: '#800020', // Crimson/Burgundy
+                        },
+                        cream: '#FAF7F2'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #FAF7F2;
+            color: #1a1a1a;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#D4AF37 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+            opacity: 0.15;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFE89C 0%, #D4AF37 50%, #997508 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border {
+            border-image: linear-gradient(to right, #D4AF37, #FFE89C, #D4AF37) 1;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-burgundy-900 text-gold-300 text-xs md:text-sm py-2 px-4 text-center font-medium flex items-center justify-center gap-2 border-b border-gold-500/30">
+        <i class="fa-solid fa-crown text-gold-500 animate-pulse"></i>
+        <span data-i18n="topBarText">منصة ألكازار للتوابل الملكية والزيوت الطبيعية | شحن وتوصيل لكافة الولايات والدول</span>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-emerald-900/95 backdrop-blur-md border-b border-gold-500/30 text-white shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo & Title -->
+                <div class="flex items-center gap-3">
+                    <img src="logo.jpg" onerror="this.onerror=null; this.src='https://placehold.co/100x100/0F4C3A/D4AF37?text=ALCAZAR';" alt="ألكازار" class="w-12 h-12 rounded-full border-2 border-gold-500 object-cover shadow-lg">
+                    <div>
+                        <a href="#" class="text-2xl font-black tracking-wide gold-gradient-text">ألكازار</a>
+                        <p class="text-[10px] text-gold-400 font-semibold tracking-wider uppercase" data-i18n="subTitle">ALCAZAR Royal Spices</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+                    <a href="#hero" class="hover:text-gold-400 transition-colors" data-i18n="navHome">الرئيسية</a>
+                    <a href="#products" class="hover:text-gold-400 transition-colors" data-i18n="navProducts">كتالوج المنتجات</a>
+                    <a href="#encyclopedia" class="hover:text-gold-400 transition-colors" data-i18n="navEncyclopedia">موسوعة التوابل</a>
+                    <a href="#contact-b2b" class="hover:text-gold-400 transition-colors" data-i18n="navB2b">الموردون والتواصل</a>
+                </div>
+
+                <!-- Action Buttons & Language Switcher -->
+                <div class="flex items-center gap-3">
+                    <!-- Instant Order WhatsApp Button (Consumer) -->
+                    <a href="https://wa.me/213552701411" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white px-4 py-2 rounded-full text-xs md:text-sm font-bold border border-gold-500/40 shadow-lg hover:shadow-gold-500/20 transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg text-emerald-300"></i>
+                        <span data-i18n="quickOrderBtn">طلب سريع: 0552701411</span>
+                    </a>
+
+                    <!-- Language Switcher Selector -->
+                    <div class="relative inline-block text-left">
+                        <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-emerald-850 text-gold-300 border border-gold-500/40 text-xs md:text-sm rounded-lg px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-gold-500 cursor-pointer">
+                            <option value="ar">العربية (AR)</option>
+                            <option value="fr">Français (FR)</option>
+                            <option value="en">English (EN)</option>
+                            <option value="es">Español (ES)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (First Fold / Screen) -->
+    <section id="hero" class="relative bg-gradient-to-b from-emerald-900 via-emerald-850 to-emerald-900 text-white min-h-[85vh] flex items-center overflow-hidden py-16">
+        <div class="absolute inset-0 bg-pattern"></div>
+        <div class="absolute -right-20 -top-20 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-burgundy-900/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs md:text-sm font-semibold">
+                        <i class="fa-solid fa-award"></i>
+                        <span data-i18n="heroBadge">الأصالة والأناقة التلمسانية</span>
+                    </div>
+
+                    <!-- HERO TITLE: STRICTLY NO MEDICINAL / NO PERSONAL NAMES -->
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight">
+                        <span class="block text-white" data-i18n="heroTitle1">ألكازار</span>
+                        <span class="gold-gradient-text" data-i18n="heroTitle2">للتوابل الملكية والزيوت الطبيعية</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-base sm:text-lg max-w-2xl leading-relaxed mx-auto lg:mx-0" data-i18n="heroDesc">
+                        نستخلص لكم أنقى الزيوت الطبيعية الصافية ونعد أرقى خلطات التوابل الملكية المستوحاة من عراقة عاصمة التراث تلمسان. طعم رفيع وجودة استثنائية تناسب ذوقكم الرفيع.
+                    </p>
+
+                    <!-- Order Action Box with Consumer WhatsApp (+213552701411) -->
+                    <div class="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start items-center">
+                        <a href="https://wa.me/213552701411?text=مرحباً%20منصة%20ألكازار،%20أود%20الاستفسار%20عن%20طلب%20منتجات" target="_blank" class="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-emerald-950 font-black px-8 py-4 rounded-xl shadow-xl shadow-gold-500/20 flex items-center gap-3 text-lg transition-transform hover:scale-105">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span data-i18n="heroOrderBtn">اطلب الآن عبر الواتساب (0552701411)</span>
+                        </a>
+
+                        <a href="#products" class="bg-emerald-800/80 hover:bg-emerald-800 border border-gold-500/40 text-gold-300 font-bold px-6 py-4 rounded-xl text-base transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-store"></i>
+                            <span data-i18n="exploreCatalog">استكشف المنتجات</span>
+                        </a>
+                    </div>
+
+                    <!-- Quality Highlights -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-gold-500/20 text-center">
+                        <div>
+                            <div class="text-gold-400 font-bold text-xl sm:text-2xl">100%</div>
+                            <div class="text-xs text-gray-400" data-i18n="stat1">زيوت طبيعية نقية</div>
+                        </div>
+                        <div>
+                            <div class="text-gold-400 font-bold text-xl sm:text-2xl">عريقة</div>
+                            <div class="text-xs text-gray-400" data-i18n="stat2">وصفات تلمسانية</div>
+                        </div>
+                        <div>
+                            <div class="text-gold-400 font-bold text-xl sm:text-2xl">58</div>
+                            <div class="text-xs text-gray-400" data-i18n="stat3">ولاية توصيل مباشر</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Image Display -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute inset-0 bg-gold-500/20 rounded-3xl transform rotate-3 blur-md"></div>
+                        <div class="relative bg-emerald-850 border-2 border-gold-500/50 p-4 rounded-3xl shadow-2xl overflow-hidden">
+                            <img src="hero-spices.jpg" onerror="this.onerror=null; this.src='https://placehold.co/600x700/0F4C3A/D4AF37?text=ALCAZAR+Royal+Spices';" alt="توابل وزيوت ألكازار" class="w-full h-80 sm:h-96 object-cover rounded-2xl">
+                            <div class="mt-4 p-3 bg-burgundy-900/80 rounded-xl border border-gold-500/30 text-center">
+                                <span class="text-gold-300 font-bold text-sm" data-i18n="heroBannerText">👑 تشكيلة ألكازار الفاخرة - تلمسان</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS CATALOG SECTION -->
+    <section id="products" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-burgundy-900 font-bold text-sm tracking-wider uppercase" data-i18n="catSub">تشكيلة ألكازار الملكية</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-emerald-900 mt-2 mb-4" data-i18n="catTitle">كتالوج المنتجات والزيوت</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button onclick="filterProducts('all')" class="filter-btn active bg-emerald-900 text-gold-300 font-bold px-5 py-2.5 rounded-full text-sm shadow hover:bg-emerald-800 transition-all" data-i18n="filterAll">الكل</button>
+                <button onclick="filterProducts('spices')" class="filter-btn bg-white text-emerald-900 border border-emerald-900/20 font-bold px-5 py-2.5 rounded-full text-sm shadow hover:bg-gold-500 hover:text-emerald-950 transition-all" data-i18n="filterSpices">التوابل الملكية</button>
+                <button onclick="filterProducts('oils')" class="filter-btn bg-white text-emerald-900 border border-emerald-900/20 font-bold px-5 py-2.5 rounded-full text-sm shadow hover:bg-gold-500 hover:text-emerald-950 transition-all" data-i18n="filterOils">الزيوت الطبيعية</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Product Card 1 -->
+                <div class="product-card spices bg-white rounded-2xl border border-gold-500/30 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-56 bg-emerald-900">
+                            <img src="spice-ras-el-hanout.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x300/0F4C3A/D4AF37?text=راس+الحانوت+الملكي';" alt="رأس الحانوت التلمساني" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-burgundy-900 text-gold-300 text-xs font-bold px-3 py-1 rounded-full border border-gold-500">خاص بألكازار</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-emerald-900 mb-2">رأس الحانوت التلمساني الملكي</h3>
+                            <p class="text-gray-600 text-sm mb-4">خلطة أصيلة تضم أكثر من 24 توابل نادرة منتقاة بعناية لتعطي طعماً ونكهة أندلسية ساحرة.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs text-gray-500">الوزن: 250 غرام / 1 كغ</span>
+                            <span class="text-lg font-black text-burgundy-900">سعر حسب الكمية</span>
+                        </div>
+                        <button onclick="openOrderModal('رأس الحانوت التلمساني الملكي')" class="w-full bg-emerald-900 hover:bg-emerald-800 text-gold-300 font-bold py-3 rounded-xl border border-gold-500/40 flex items-center justify-center gap-2 transition-colors">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                            <span>اطلب مباشرة (0552701411)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card oils bg-white rounded-2xl border border-gold-500/30 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-56 bg-emerald-900">
+                            <img src="oil-argan.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x300/0F4C3A/D4AF37?text=زيت+الأرغان+الطبيعي';" alt="زيت الأرغان الطبيعي" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-emerald-900 text-gold-300 text-xs font-bold px-3 py-1 rounded-full border border-gold-500">طبيعي 100%</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-emerald-900 mb-2">زيت الأرغان الصافي</h3>
+                            <p class="text-gray-600 text-sm mb-4">مستخلص طازج على البارد بدون أي إضافات، مثالي للعناية اليومية والتغذية الطبيعية.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs text-gray-500">الحجم: 100 مل / 250 مل</span>
+                            <span class="text-lg font-black text-burgundy-900">جودة ممتازة</span>
+                        </div>
+                        <button onclick="openOrderModal('زيت الأرغان الصافي')" class="w-full bg-emerald-900 hover:bg-emerald-800 text-gold-300 font-bold py-3 rounded-xl border border-gold-500/40 flex items-center justify-center gap-2 transition-colors">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                            <span>اطلب مباشرة (0552701411)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card oils bg-white rounded-2xl border border-gold-500/30 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-56 bg-emerald-900">
+                            <img src="oil-blackseed.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x300/0F4C3A/D4AF37?text=زيت+الحبة+البركة';" alt="زيت الحبة السوداء" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-emerald-900 text-gold-300 text-xs font-bold px-3 py-1 rounded-full border border-gold-500">عصرة أولى</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-emerald-900 mb-2">زيت الحبة السوداء (البركة)</h3>
+                            <p class="text-gray-600 text-sm mb-4">زيت طبيعي مستخلص بعناية فائقة من أجود بذور الحبة السوداء النقية 100%.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs text-gray-500">الحجم: 60 مل / 125 مل</span>
+                            <span class="text-lg font-black text-burgundy-900">نقاء تام</span>
+                        </div>
+                        <button onclick="openOrderModal('زيت الحبة السوداء')" class="w-full bg-emerald-900 hover:bg-emerald-800 text-gold-300 font-bold py-3 rounded-xl border border-gold-500/40 flex items-center justify-center gap-2 transition-colors">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                            <span>اطلب مباشرة (0552701411)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card spices bg-white rounded-2xl border border-gold-500/30 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-56 bg-emerald-900">
+                            <img src="spice-saffron.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x300/0F4C3A/D4AF37?text=الزعفران+الملكي';" alt="الزعفران الحر" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-burgundy-900 text-gold-300 text-xs font-bold px-3 py-1 rounded-full border border-gold-500">درجة أولى</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-emerald-900 mb-2">الزعفران الحر الملكي</h3>
+                            <p class="text-gray-600 text-sm mb-4">خيوط الزعفران الأنيقة الفاخرة ذات اللون الأحمر القاني والنسيم العطري المميز.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs text-gray-500">الوزن: 2 غرام / 5 غرام</span>
+                            <span class="text-lg font-black text-burgundy-900">أصل ونقاء</span>
+                        </div>
+                        <button onclick="openOrderModal('الزعفران الحر الملكي')" class="w-full bg-emerald-900 hover:bg-emerald-800 text-gold-300 font-bold py-3 rounded-xl border border-gold-500/40 flex items-center justify-center gap-2 transition-colors">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                            <span>اطلب مباشرة (0552701411)</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TLEMCEN HERITAGE & ENCYCLOPEDIA SECTION -->
+    <section id="encyclopedia" class="py-20 bg-emerald-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-gold-400 font-bold text-sm tracking-widest uppercase">موسوعة التوابل والتراث</span>
+                    <h2 class="text-3xl sm:text-4xl font-black mt-2 mb-6">تراث تلمسان وأسرار التوابل الملكية</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        ارتبط اسم تلمسان عاصمة التراث والثقافة عبر القرون بطرق التجارة الأندلسية التاريخية، حيث امتزجت أسرار تحضير التوابل العطرية مع تقنيات تقطير واستخلاص الزيوت الطبيعية الصافية.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        في مؤسسة ألكازار، نحافظ على هذه الأمانة العريقة بنسق حديث يلبي التطلعات العصرية مع الالتزام بأعلى معايير النقاء والأصالة.
+                    </p>
+                    <div class="flex items-center gap-4 p-4 bg-emerald-850 rounded-xl border border-gold-500/30">
+                        <i class="fa-solid fa-scroll text-3xl text-gold-400"></i>
+                        <div>
+                            <h4 class="font-bold text-gold-300">أصالة الوصفة التقليدية</h4>
+                            <p class="text-xs text-gray-400">تحضير يدوّي وتخزين متقن يحافظ على الزيوت الطيارة والنكهة الأصلية.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-emerald-850 p-8 rounded-3xl border border-gold-500/30 shadow-2xl">
+                    <h3 class="text-2xl font-bold text-gold-300 mb-4 text-center">فوائد الزيوت الطبيعية الصافية</h3>
+                    <ul class="space-y-4 text-sm text-gray-200">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-gold-400 mt-1"></i>
+                            <span>عصر بارد يضمن حفظ الفيتامينات والمركبات الطبيعية النافعة.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-gold-400 mt-1"></i>
+                            <span>خالية تماماً من أية مواد حافظة أو مضافات كيميائية.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-gold-400 mt-1"></i>
+                            <span>اختبارات جودة صارمة لضمان النقاء العالي والمذاق الرفيع.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & B2B SUPPLIERS PORTAL (CONTAINING +213699908979) -->
+    <section id="contact-b2b" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl border-2 border-gold-500/40 p-8 md:p-12 shadow-2xl">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-burgundy-900 font-bold text-sm tracking-wider uppercase">التوريد والجملة والتواصل</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-emerald-900 mt-2 mb-4">بوابة الموردين والطلبات الكبرى (B2B)</h2>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        نرحب بالتعاون مع الموزعين، التجار، والمؤسسات التجارية لتقديم التوابل والزيوت الطبيعية بكميات جملة وبأعلى معايير التغليف.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- B2B Direct Phone Card -->
+                    <div class="bg-emerald-900 text-white p-8 rounded-2xl border border-gold-500 shadow-xl text-center md:text-right">
+                        <div class="inline-block p-4 bg-gold-500/10 rounded-full text-gold-400 mb-4">
+                            <i class="fa-solid fa-handshake text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gold-300 mb-2">قسم التوريد والجملة B2B</h3>
+                        <p class="text-gray-300 text-sm mb-6">للتواصل المباشر بشأن العقود، التصدير، وتوريد الجملة للشركات والمحلات:</p>
+
+                        <!-- B2B WhatsApp & Phone (+213699908979) -->
+                        <div class="p-4 bg-emerald-850 rounded-xl border border-gold-500/30 mb-6">
+                            <div class="text-xs text-gold-400 font-bold mb-1">رقم هاتف / واتساب الموردين:</div>
+                            <div class="text-2xl font-black tracking-wider text-white" dir="ltr">+213 699 90 89 79</div>
+                        </div>
+
+                        <a href="https://wa.me/213699908979?text=السلام%20عليكم،%20نود%20الاستفسار%20عن%20عروض%20التوريد%20والجملة%20من%20منصة%20ألكازار" target="_blank" class="w-full bg-gold-500 hover:bg-gold-400 text-emerald-950 font-black py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>تواصل مع قسم الجملة (0699908979)</span>
+                        </a>
+                    </div>
+
+                    <!-- General Inquiry & Address Info -->
+                    <div class="space-y-6 p-4">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-burgundy-900 text-gold-300 rounded-xl text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-emerald-900 text-lg">المقر الرئيسي</h4>
+                                <p class="text-gray-600 text-sm">ولاية تلمسان، الجمهورية الجزائرية</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-emerald-900 text-gold-300 rounded-xl text-xl">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-emerald-900 text-lg">التوصيل والشحن</h4>
+                                <p class="text-gray-600 text-sm">توصيل متوفر لـ 58 ولاية وللطلبات الدولية</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-gold-500 text-emerald-950 rounded-xl text-xl">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-emerald-900 text-lg">طلبات المستهلكين المباشرة</h4>
+                                <p class="text-gray-600 text-sm">واتساب الطلبات: 0552701411</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER: STRICTLY NO PERSONAL NAMES -->
+    <footer class="bg-emerald-950 text-white border-t border-gold-500/30 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-right">
+                
+                <div>
+                    <h3 class="text-2xl font-black text-gold-400 mb-2">ألكازار</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        منصة ألكازار للتوابل الملكية والزيوت الطبيعية. رمز الجودة والأصالة التلمسانية.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-gold-300 mb-3">روابط سريعة</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#hero" class="hover:text-gold-400">الرئيسية</a></li>
+                        <li><a href="#products" class="hover:text-gold-400">المنتجات والزيوت</a></li>
+                        <li><a href="#contact-b2b" class="hover:text-gold-400">قسم التوريد والجملة</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-gold-300 mb-3">خدمة الزبائن</h4>
+                    <p class="text-xs text-gray-300 mb-2">واتساب الطلبات: +213 552 70 14 11</p>
+                    <p class="text-xs text-gray-300">واتساب الجملة B2B: +213 699 90 89 79</p>
+                </div>
+
+            </div>
+
+            <!-- COPYRIGHT NOTICE: ABSOLUTELY NO PERSONAL NAMES -->
+            <div class="pt-8 border-t border-emerald-900 text-center text-xs text-gray-400">
+                <p>جميع الحقوق محفوظة © 2026 لمؤسسة ألكازار للتوابل الملكية والزيوت الطبيعية - تلمسان، الجزائر</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING CONSUMER WHATSAPP BUTTON (+213552701411) -->
+    <a href="https://wa.me/213552701411?text=مرحباً%20ألكازار،%20أود%20طلب%20منتجات" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-600 hover:bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 border-2 border-gold-400 group" title="اطلب عبر الواتساب">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-xs font-bold px-0 group-hover:px-2">طلب سريع 0552701411</span>
+    </a>
+
+    <!-- ORDER MODAL -->
+    <div id="orderModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 border-2 border-gold-500 relative">
+            <button onclick="closeOrderModal()" class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 text-xl font-bold">&times;</button>
+            <h3 class="text-xl font-bold text-emerald-900 mb-2" id="modalProductName">تأكيد الطلب</h3>
+            <p class="text-xs text-gray-500 mb-4">سيتم تحويل طلبك مباشرة إلى خدمة العملاء عبر الواتساب (0552701411)</p>
+            
+            <form onsubmit="submitOrder(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">الاسم الكامل</label>
+                    <input type="text" id="custName" required placeholder="أدخل اسمك الكريم" class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-emerald-900 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">الولاية / المدينة</label>
+                    <input type="text" id="custCity" required placeholder="مثال: تلمسان، وهران..." class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-emerald-900 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">الكمية المطلوبة</label>
+                    <select id="custQty" class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-emerald-900 outline-none">
+                        <option value="1 قطعة / علبة">1 قطعة / علبة</option>
+                        <option value="2 قطعة">2 قطعة</option>
+                        <option value="كمية خاصة / جملة">كمية خاصة / جملة</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-emerald-900 hover:bg-emerald-800 text-gold-300 font-bold py-3 rounded-xl flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                    <span>إرسال الطلب عبر الواتساب</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MULTILINGUAL & INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Translations Data dictionary
+        const translations = {
+            ar: {
+                topBarText: "منصة ألكازار للتوابل الملكية والزيوت الطبيعية | شحن وتوصيل لكافة الولايات والدول",
+                subTitle: "ALCAZAR Royal Spices",
+                navHome: "الرئيسية",
+                navProducts: "كتالوج المنتجات",
+                navEncyclopedia: "موسوعة التوابل",
+                navB2b: "الموردون والتواصل",
+                quickOrderBtn: "طلب سريع: 0552701411",
+                heroBadge: "الأصالة والأناقة التلمسانية",
+                heroTitle1: "ألكازار",
+                heroTitle2: "للتوابل الملكية والزيوت الطبيعية",
+                heroDesc: "نستخلص لكم أنقى الزيوت الطبيعية الصافية ونعد أرقى خلطات التوابل الملكية المستوحاة من عراقة عاصمة التراث تلمسان. طعم رفيع وجودة استثنائية تناسب ذوقكم الرفيع.",
+                heroOrderBtn: "اطلب الآن عبر الواتساب (0552701411)",
+                exploreCatalog: "استكشف المنتجات",
+                stat1: "زيوت طبيعية نقية",
+                stat2: "وصفات تلمسانية",
+                stat3: "ولاية توصيل مباشر",
+                heroBannerText: "👑 تشكيلة ألكازار الفاخرة - تلمسان",
+                catSub: "تشكيلة ألكازار الملكية",
+                catTitle: "كتالوج المنتجات والزيوت",
+                filterAll: "الكل",
+                filterSpices: "التوابل الملكية",
+                filterOils: "الزيوت الطبيعية"
+            },
+            fr: {
+                topBarText: "Plateforme ALCAZAR Épices Royales & Huiles Naturelles | Livraison 58 Wilayas & International",
+                subTitle: "ALCAZAR Épices Royales",
+                navHome: "Accueil",
+                navProducts: "Catalogue",
+                navEncyclopedia: "Encyclopédie",
+                navB2b: "Fournisseurs & B2B",
+                quickOrderBtn: "Commande: 0552701411",
+                heroBadge: "Authenticité de Tlemcen",
+                heroTitle1: "ALCAZAR",
+                heroTitle2: "Épices Royales & Huiles Naturelles",
+                heroDesc: "Découvrez nos huiles naturelles pures et nos mélanges d'épices royales inspirés de la tradition de Tlemcen.",
+                heroOrderBtn: "Commander via WhatsApp (0552701411)",
+                exploreCatalog: "Explorer le catalogue",
+                stat1: "Huiles 100% Pures",
+                stat2: "Recettes Traditionnelles",
+                stat3: "Wilayas Desservies",
+                heroBannerText: "👑 Collection Royale ALCAZAR - Tlemcen",
+                catSub: "Gamme Royale",
+                catTitle: "Catalogue des Produits",
+                filterAll: "Tous",
+                filterSpices: "Épices Royales",
+                filterOils: "Huiles Naturelles"
+            },
+            en: {
+                topBarText: "ALCAZAR Platform Royal Spices & Natural Oils | Worldwide & Local Delivery",
+                subTitle: "ALCAZAR Royal Spices",
+                navHome: "Home",
+                navProducts: "Products Catalog",
+                navEncyclopedia: "Encyclopedia",
+                navB2b: "B2B & Suppliers",
+                quickOrderBtn: "Order: 0552701411",
+                heroBadge: "Heritage of Tlemcen",
+                heroTitle1: "ALCAZAR",
+                heroTitle2: "Royal Spices & Natural Oils",
+                heroDesc: "Extracting pure natural oils and premium royal spice blends rooted in the rich heritage of Tlemcen.",
+                heroOrderBtn: "Order via WhatsApp (0552701411)",
+                exploreCatalog: "Explore Catalog",
+                stat1: "Pure Natural Oils",
+                stat2: "Authentic Recipes",
+                stat3: "Provinces Covered",
+                heroBannerText: "👑 ALCAZAR Premium Selection - Tlemcen",
+                catSub: "Royal Collection",
+                catTitle: "Product Catalog",
+                filterAll: "All",
+                filterSpices: "Royal Spices",
+                filterOils: "Natural Oils"
+            },
+            es: {
+                topBarText: "Plataforma ALCAZAR Especias Reales y Aceites Naturales | Envíos Nacionales e Internacionales",
+                subTitle: "ALCAZAR Especias Reales",
+                navHome: "Inicio",
+                navProducts: "Catálogo",
+                navEncyclopedia: "Enciclopedia",
+                navB2b: "Proveedores y B2B",
+                quickOrderBtn: "Pedir: 0552701411",
+                heroBadge: "Tradición de Tlemcen",
+                heroTitle1: "ALCAZAR",
+                heroTitle2: "Especias Reales y Aceites Naturales",
+                heroDesc: "Ofrecemos los más puros aceites naturales y exclusivas mezclas de especias reales con la herencia de Tlemcen.",
+                heroOrderBtn: "Pedir por WhatsApp (0552701411)",
+                exploreCatalog: "Ver Catálogo",
+                stat1: "Aceites 100% Puros",
+                stat2: "Recetas Reales",
+                stat3: "Provincias Atendidas",
+                heroBannerText: "👑 Selección Real ALCAZAR - Tlemcen",
+                catSub: "Colección Real",
+                catTitle: "Catálogo de Productos",
+                filterAll: "Todos",
+                filterSpices: "Especias Reales",
+                filterOils: "Aceites Naturales"
+            }
+        };
+
+        // Language Switcher Handler
+        function changeLanguage(lang) {
+            const html = document.documentElement;
+            if (lang === 'ar') {
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', 'ar');
+            } else {
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', lang);
+            }
+
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // Product Catalog Filter
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('bg-emerald-900', 'text-gold-300'));
+
+            if (category === 'all') {
+                cards.forEach(card => card.style.display = 'flex');
+            } else {
+                cards.forEach(card => {
+                    if (card.classList.contains(category)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        }
+
+        // Modal Functionality
+        let currentSelectedProduct = '';
+        function openOrderModal(productName) {
+            currentSelectedProduct = productName;
+            document.getElementById('modalProductName').textContent = 'طلب: ' + productName;
+            document.getElementById('orderModal').classList.remove('hidden');
+        }
+
+        function closeOrderModal() {
+            document.getElementById('orderModal').classList.add('hidden');
+        }
+
+        function submitOrder(e) {
+            e.preventDefault();
+            const name = document.getElementById('custName').value;
+            const city = document.getElementById('custCity').value;
+            const qty = document.getElementById('custQty').value;
+
+            const text = `السلام عليكم منصة ألكازار،%0Aأود طلب: *${currentSelectedProduct}*%0Aالاسم: ${name}%0Aالولاية: ${city}%0Aالكمية: ${qty}`;
+            window.open(`https://wa.me/213552701411?text=${text}`, '_blank');
+            closeOrderModal();
+        }
+    </script>
+</body>
+</html>
